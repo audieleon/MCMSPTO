@@ -1,6 +1,6 @@
 {
-    "name": "helloworld",
-    "description": "Simple hello world sample in Node",
+    "name": "mcmspto",
+    "description": "QR Code Scanner as Ticket",
     "version": "1.0.0",
     "private": true,
     "main": "index.js",
@@ -13,9 +13,10 @@
     "author": "Google LLC",
     "license": "Apache-2.0",
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "sheetdb-node": "^0.0.12"
     },
     "devDependencies": {
-      "nodemon": "^2.0.19"
+        "nodemon": "^2.0.19"
     }
 }
