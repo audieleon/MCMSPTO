@@ -1,12 +1,21 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
-app.get('/', (req, res) => {
-  const name = process.env.NAME || 'MCMSPTO Member';
-  res.send(`Hello ${name}!`);
+app.use(express.urlencoded());
+app.use(express.json());
+
+app.get('/',(req, res) => {
+res.sendFile(__dirname + "/index.html");
+});
+
+app.post('/',(req, res) => {
+var code = req.body.code;
+console.log('Code = '+ code);
+res.sendFile(__dirname + "/index.html");
 });
 
 const port = parseInt(process.env.PORT) || 8080;
+
 app.listen(port, () => {
-  console.log(`hello mcms: listening on port ${port}`);
+    console.log(`hello mcms: listening on port ${port}`);
 });
