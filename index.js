@@ -8,5 +8,5 @@ app.get('/', (req, res) => {
 
 const port = parseInt(process.env.PORT) || 8080;
 app.listen(port, () => {
-  console.log(`helloworld: listening on port ${port}`);
+  console.log(`hello mcms: listening on port ${port}`);
 });
